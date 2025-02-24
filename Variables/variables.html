@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Indentation Exercise</title>
+    <style>
+        /* Definición de las variables */
+        html {
+            --gutter: 6ch;  /* base para el espaciado */
+            --offset: 1;    /* valor para el primer nivel */
+        }
+
+        /* Estilo general para las listas */
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        /* Primer nivel de lista */
+        ul li {
+            margin-left: calc(var(--gutter) * var(--offset));
+        }
+
+        /* Segundo nivel de lista */
+        ul ul li {
+            --offset: 2;  /* Cambiar el valor de offset */
+            margin-left: calc(var(--gutter) * var(--offset));
+        }
+
+        /* Tercer nivel de lista */
+        ul ul ul li {
+            --offset: 6;  /* Cambiar el valor de offset */
+            margin-left: calc(var(--gutter) * var(--offset));
+        }
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2
+            <ul>
+                <li>Subitem 1</li>
+                <li>Subitem 2
+                    <ul>
+                        <li>Subsubitem 1</li>
+                        <li>Subsubitem 2</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+</body>
+</html>
