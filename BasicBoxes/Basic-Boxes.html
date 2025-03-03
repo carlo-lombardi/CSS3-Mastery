@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Box Example</title>
+    <style>
+       .horizontal {
+  writing-mode: horizontal-tb; /* Texto en línea horizontalmente (normal) */
+  inline-size: 200px; /* Actúa como width */
+  block-size: 100px;  /* Actúa como height */
+  border: 1px solid black;
+}
+
+.vertical {
+  writing-mode: vertical-rl; /* Texto en línea verticalmente (de arriba hacia abajo) */
+  inline-size: 100px; /* Ahora es altura */
+  block-size: 200px; /* Ahora es ancho */
+  border: 1px solid red;
+}
+
+    </style>
+</head>
+<body>
+    <div class="horizontal">これは横書きです (Horizontal Writing)</div>
+    <div class="vertical">これは縦書きです (Vertical Writing)</div>
+</body>
+</html>

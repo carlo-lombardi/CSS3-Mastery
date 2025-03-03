@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content-Based Sizing Values</title>
+    <style>
+        
+        .max-content {
+  /*width: max-content;  /* El ancho se ajusta al máximo contenido sin saltos de línea */
+  background-color: lightblue;
+  padding: 10px;
+  border: 1px solid #000;
+}
+.min-content {
+  width: min-content;  /* El ancho se ajusta al mínimo contenido posible sin cortar palabras */
+  background-color: lightgreen;
+  padding: 10px;
+  border: 1px solid #000;
+}
+.fit-content {
+max-width: 300px;
+  background-color: lightcoral;
+  padding: 10px;
+  border: 1px solid #000;
+}
+.nav-menu ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  padding: 0;
+}
+
+.nav-menu li {
+  width: fit-content;   /* El ancho ajusta según el contenido del enlace */
+  max-width: 200px;     /* El ancho no debe superar los 200px */
+  min-width: 80px;      /* El ancho no debe ser menor a 80px */
+  background-color: lightcoral;
+  padding: 10px;
+  text-align: center;
+}
+
+.product-card {
+  width: fit-content;   /* El ancho se ajusta al contenido */
+  max-width: 550px;     /* Limita el ancho máximo a 350px */
+  min-width: 200px;     /* El ancho no puede ser menor a 200px */
+  background-color: lightblue;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <nav class="nav-menu">
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Sobre Nosotros</a></li>
+          <li><a href="#">Servicios</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+
+      
+    <div class="max-content">
+        Este es un texto largo sin saltos de línea. El contenedor se expandirá hasta el final.
+      </div>
+      <div class="min-content">
+        Este es un párrafo con palabras más largas como "fobia".
+      </div>
+      <div class="fit-content">
+        Este es un texto que no se desbordará del contenedor aunque sea largo.
+      </div>
+      <div class="fit-content">
+        Este es un texto Este es un texto Este es un texto Este es un texto Este es un texto Este es un texto Este es un texto Este es un texto Este es un texto Este es un texto 
+      </div>
+
+      <div class="product-card">
+        <h3>Nombre del Producto</h3>
+        <p>Una breve descripción del producto que puede cambiar de longitud dependiendo de lo que se diga.</p>
+      </div>
+      
+</body>
+</html>
